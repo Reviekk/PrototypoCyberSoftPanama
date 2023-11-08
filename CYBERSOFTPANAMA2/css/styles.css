@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+
+:root{
+    --color-primario: rgb(39, 39, 253);
+    --color-titulo: #000;
+    --align-titulo: left;
+    --padding-container: 100px 0;
+    --width-container: 90%;
+    --max-width-continer: 1200px;
+    --color-btn: rgb(39, 39, 253);
+    --texto-btn: #fff;
+    --padding-btn: 20px 35px;
+    --heigth-forma: 18em;
+
+}
+.container{
+    width: var(--width-container);
+    max-width: var(--max-width-continer);
+    padding: var(--padding-container);
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #f1f1fc;
+    opacity: 1;
+}
+
+
+.footer-icon{
+    width: 30px;
+}
+
+.hero{
+    background-image: url("assets/fondoinical.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    min-width: 500px;
+    position: relative;
+    --padding-container:0;
+}
+.hero::after{
+
+    content: "";
+    display: block;
+    position: absolute;
+    
+}
+.hero-container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 3fr 2fr;
+    place-items: center;
+    gap: 20px;
+}
+.hero .container{
+    padding-right: 50%; 
+}
+
+.hero h1{
+
+    color: white;
+    font-size: 5em;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    letter-spacing: 0.07em;
+    word-spacing: 0.07em;
+    
+}
+
+
+ul{
+    list-style-position: outside;
+    margin-left: 0;
+
+
+}
+li{
+    padding: 5px;
+    font-size: 2em;
+    color: rgb(249, 252, 102);
+    text-shadow: black 0.1em 0.1em 0.2em;
+    letter-spacing: 0.02em;
+    word-spacing: 0.04em;
+    font-weight: 700;
+}
