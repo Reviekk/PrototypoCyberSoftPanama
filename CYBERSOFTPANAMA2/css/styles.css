@@ -2,13 +2,13 @@
 
 
 :root{
-    --color-primario: rgb(39, 39, 253);
+    --color-primario: rgb(40, 67, 119);
     --color-titulo: #000;
     --align-titulo: left;
     --padding-container: 100px 0;
-    --width-container: 90%;
-    --max-width-continer: 1200px;
-    --color-btn: rgb(39, 39, 253);
+    --width-container: 100%;
+    --max-width-continer: 1350px;
+    --color-btn: rgba(39, 39, 253, 0.685);
     --texto-btn: #fff;
     --padding-btn: 20px 35px;
     --heigth-forma: 18em;
@@ -24,6 +24,7 @@
 }
 
 
+
 body{
     font-family: 'Inter', sans-serif;
     background-color: #f1f1fc;
@@ -31,16 +32,24 @@ body{
 }
 
 
-.footer-icon{
-    width: 30px;
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent 25%, #888585 50%, transparent 75%);
+    margin: 10px 0;
+    
 }
+
+
+/* Hero*/
+
 
 .hero{
     background-image: url("assets/fondoinical.jpg");
     background-position: center;
     background-size: cover;
     height: 100vh;
-    min-width: 500px;
     position: relative;
     --padding-container:0;
 }
@@ -49,27 +58,33 @@ body{
     content: "";
     display: block;
     position: absolute;
-    
+    height: var(--heigth-forma);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primario);
+    z-index: 1;
+    clip-path: polygon(100% 20%, 75% 100%, 100% 100%);  
 }
 .hero-container{
     display: grid;
     height: 100%;
     grid-template-columns: 3fr 2fr;
     place-items: center;
-    gap: 20px;
-}
-.hero .container{
-    padding-right: 50%; 
 }
 
+.hero-texto{
+    padding-right: 20%;
+}
 .hero h1{
-
     color: white;
-    font-size: 5em;
     text-shadow: black 0.1em 0.1em 0.2em;
     letter-spacing: 0.07em;
     word-spacing: 0.07em;
     
+}
+h1{
+ font-size: 5rem;
 }
 
 
@@ -87,4 +102,272 @@ li{
     letter-spacing: 0.02em;
     word-spacing: 0.04em;
     font-weight: 700;
+}
+
+/* Main*/
+
+.main {
+    background: #fff;
+}
+
+.titulo{
+    font-size: 2rem;
+    text-align: var(--align-titulo);
+    color: var(--color-titulo);
+}
+
+
+.titulo--borde{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: var(--align-titulo);
+    color: var(--color-titulo);
+}
+
+.titulo--borde::after{
+    content: "";
+    display: block;
+    width: 200px;
+    margin-top: 20px;
+    height: 4px;
+    background: var(--color-primario);
+
+}
+.cta{
+    display: inline-block;
+    background: var(--color-btn);
+    color: var(--texto-btn);
+    padding: var(--padding-btn);
+    text-align: center;
+    text-decoration: none;
+} 
+
+/* Quienes Somos*/
+.quienes-somos{
+    height: 50vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    place-items: center;
+ 
+}
+.quienes-somos::before{
+    content: "";
+    position: absolute;
+    width: 66.7%;
+    height: 500px;
+    background: var(--color-primario);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    
+}
+.somos-container{
+    width: 90%;
+    z-index: 2;
+    color: #fff;
+}
+
+.texto-somos{
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 1.5;
+    font-weight: 500;
+    
+}
+.somos-imagen{
+    text-align: center;
+   z-index: 2;
+}
+
+.somos-img{
+    width: 500px;
+}
+.gerente {
+    display: flex;
+    flex-direction: column;
+}
+.gerente p {
+    margin: 15px;
+    padding: 15px;
+}
+
+/* Servicios */
+
+.servicios{
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    place-items: center;
+    position: relative;
+}
+.servicios::after{
+
+    content: "";
+    display: block;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primario);
+    z-index: 1;
+    clip-path: inset(0 50% 0 0);  
+    
+}
+
+.servicio-texto{
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 1.5;
+    font-weight: 500;
+    width: 90%;
+}
+
+.servicio-imagen{
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.servicio-img{
+    width: 630px;
+    height: 80vh;
+}
+
+
+/* footer-Contacto*/
+
+.footer{
+    position: relative;
+    padding-bottom: 0;
+}
+.footer::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    top: 0;
+    left: 0;
+    clip-path: polygon(50% 35%, 0 0, 100% 0);
+    
+}
+
+.footer-texto{
+    padding-left: 15px;
+}
+
+.footer-contacto{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    place-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-parrafo{
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.footer-imagen{
+    margin: 0;
+}
+.footer-img{
+    width: 100%;
+}
+.titulo--borde-contacto::after{
+    content: "";
+    display: block;
+    width: 100px;
+    margin-top: 20px;
+    height: 4px;
+    background: var(--color-primario);
+
+}
+
+.footer-social{
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: 30px;
+}
+
+.footer-icon{
+    width: 30px;
+    color: black;
+   
+}
+
+.footer-link{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-copyright{
+    padding-top: 10px;
+    border-top: 2px solid #918484;
+    text-align: right;
+    padding-right: 15px;
+    background: #e9e6e6;
+}
+
+@media screen and (max-width:768px) {
+
+    :root{
+        --height-shape:14em;
+
+    }
+   .hero-texto{
+    padding-right: 300px;
+   }
+    .hero-container{
+        --padding-container: 60px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .hero-titulo{
+        font-size: 3.8rem;
+    }
+
+
+    /*Quines somos*/
+    .quienes-somos{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        
+
+    }  
+    .container{
+        padding: 50px;
+    }
+
+    .somos-container{
+        width: 100%;
+        z-index: 2;
+        color: #000000;
+       width: 650px;
+    }
+    
+    /* Servicios*/
+
+    .servicios{
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        position: relative;
+    }
+    
+
+    
+
 }
