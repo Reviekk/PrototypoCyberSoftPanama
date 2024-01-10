@@ -491,6 +491,9 @@ margin: 0;
         --height-shape:14em;
 
     }
+    .hero{
+        height: 90vh;
+    }
     .hero-titulo{
       padding-right: 50%;
     }
