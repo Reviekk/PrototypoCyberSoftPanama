@@ -476,7 +476,7 @@ margin: 0;
     align-items: center;
 }
 
-.footer-copyright{
+.footer-copyright {
     padding: 0;
     margin: 0;
     border-top: 2px solid #918484;
@@ -485,14 +485,14 @@ margin: 0;
     background: #e9e6e6;
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
 
     :root{
         --height-shape:14em;
 
     }
     .hero{
-        height: 90vh;
+        height: 110vh;
     }
     .hero-titulo{
       padding-right: 50%;
@@ -555,7 +555,7 @@ margin: 0;
     color: #000;
 
 
-}.footer
+}
 
 .footer-contacto{
     display: flex;
@@ -563,24 +563,99 @@ margin: 0;
   
 }
 
-.footer-img{
-     
-}
 .footer::before{
-    content: "";
-    position: absolute;
     width: 0%;
     height: 0px;
-    background: #fff;
-    top: 0;
-    left: 0;
-    clip-path: polygon(50% 35%, 0 0, 100% 0);
 }
 
-
-
-    
     /* Servicios*/
 
+    .sliders{
+        padding: 0;
+    }
+    .slider_containaer {
+     padding: 0;
+    }
+    
+    .slider_arrow {
+        width: 38px; /* Ancho deseado */
+        height: 38px; /* Alto deseado */
+        transition: width 0.3s, height 0.3s; /* Agregar transición para suavizar el cambio */
+        cursor: pointer;
+    }
+    
+    
+    .slider_arrow:hover {
+        width: 45px; /* Ancho al pasar el cursor */
+        height: 45px; /* Alto al pasar el cursor */
+    }
+    
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Ajusta automáticamente el número de columnas */
+        grid-template-rows: repeat(3, 1fr);
+        position: relative;
+        padding: 0;
+    }
+    
+    .servicios::after{
+        content: " ";
+        height:70%;
+        width: 100%;
+        bottom: 20%;
+        left: 0;
+        background-color: var(--color-primario);
+        clip-path: inset(0 0 60% 0);  
+        z-index: 1;
+    }
+    
+    .servicio-texto {
+        padding-top: 25px;
+        padding-left: 9vw;
+        font-size: 4vw; /* Tamaño de fuente en viewport width */
+        margin: 1.5vw 0; /* Margen en viewport width */
+        line-height: 1.5;
+        font-weight: 500;
+        width: 100%;
+        grid-column: 1/5;
+        grid-row: 2/4;
+        z-index: 3;
+        animation: EntrarDesdeDer 2s ease;
+    }
+    
    
+    .servicio-imagen {
+        padding-left: 10px;
+        padding-right: 10px;
+  
+        margin: 0;
+        grid-column: 1/6;
+        grid-row: 1/3;
+        z-index: 2;
+        animation: EntrarDesdeIzq 1.5s ease;
+    }
+    
+    .servicio-img {
+        width: 100%;
+        height: 60vh; /* Altura en viewport height */
+        object-fit: cover;
+    }
+    
+    @keyframes EntrarDesdeDer{
+        from{
+            transform: translateX(200%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+    @keyframes EntrarDesdeIzq{
+        from{
+            transform: translateX(-200%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+    
 }
