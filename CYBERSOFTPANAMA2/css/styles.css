@@ -492,7 +492,7 @@ margin: 0;
 
     }
     .hero{
-        height: 110vh;
+        height: 95vh;
     }
     .hero-titulo{
       padding-right: 50%;
@@ -600,12 +600,12 @@ margin: 0;
     
     .servicios::after{
         content: " ";
-        height:70%;
-        width: 100%;
-        bottom: 20%;
+        grid-column: 1/6;
+        grid-row: 1/-2;
+        top: 10px;
         left: 0;
         background-color: var(--color-primario);
-        clip-path: inset(0 0 60% 0);  
+        clip-path: inset(0 0 10% 0);  
         z-index: 1;
     }
     
